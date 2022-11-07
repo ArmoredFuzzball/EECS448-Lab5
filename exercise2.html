@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script>
+        let PICARRAY = [
+            "https://axiomdev.net/sloan/fox1.jpg",
+            "https://axiomdev.net/sloan/fox2.jpg",
+            "https://axiomdev.net/sloan/fox3.jpg",
+            "https://axiomdev.net/sloan/fox4.jpg",
+            "https://axiomdev.net/sloan/fox5.jpg"
+        ]
+        let INDEX = 0;
+        function previous() {
+            if (INDEX > 0) INDEX--;
+            else INDEX = PICARRAY.length - 1;
+            cycleImage();
+        }
+        function next() {
+            if (INDEX == PICARRAY.length - 1) INDEX = 0;
+            else INDEX++;
+            cycleImage();
+        }
+        function cycleImage() {
+            document.getElementById("image").src = PICARRAY[INDEX];
+        }
+    </script>
+    <style>
+        #image {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="image" src="https://axiomdev.net/sloan/fox1.jpg">
+    <button id="prev" onclick="previous()">Previous</button>
+    <button id="next" onclick="next()">Next</button>
+</body>
+
+</html>

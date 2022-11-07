@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script>
+        function validate() {
+            let pass1 = document.getElementById("pass1").value;
+            let pass2 = document.getElementById("pass2").value;
+            if (pass1 !== pass2) return alert("Error: the passwords entered don't match");
+            if (pass1.length < 8) return alert("Error: the passwords must be at least 8 characters long");
+            return alert("The passwords have passed validation");
+        }
+    </script>
+</head>
+
+<body>
+    <input id="pass1" type="password" placeholder="password">
+    <input id="pass2" type="password" placeholder="reenter password">
+    <button onclick="validate()">Validate</button>
+</body>
+
+</html>

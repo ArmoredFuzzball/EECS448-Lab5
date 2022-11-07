@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script>
+        function changeColor() {
+            var borderColorR = document.getElementById("borderColorR").value;
+            var borderColorG = document.getElementById("borderColorG").value;
+            var borderColorB = document.getElementById("borderColorB").value;
+            var backgroundColorR = document.getElementById("backgroundColorR").value;
+            var backgroundColorG = document.getElementById("backgroundColorG").value;
+            var backgroundColorB = document.getElementById("backgroundColorB").value;
+            document.getElementsByTagName("p")[0].style.borderColor = "rgb(" + borderColorR + "," + borderColorG + "," + borderColorB + ")";
+            document.getElementsByTagName("p")[0].style.backgroundColor = "rgb(" + backgroundColorR + "," + backgroundColorG + "," + backgroundColorB + ")";
+        }
+    </script>
+    <style>
+        p {
+            border: 3px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.</p><br>
+    border color (rgb 0-255)<br>
+    <input type="text" id="borderColorR" placeholder="border color red value">
+    <input type="text" id="borderColorG" placeholder="border color green value">
+    <input type="text" id="borderColorB" placeholder="border color blue value"><br>
+    background color (rgb 0-255)<br>
+    <input type="text" id="backgroundColorR" placeholder="background color red value">
+    <input type="text" id="backgroundColorG" placeholder="background color green value">
+    <input type="text" id="backgroundColorB" placeholder="background color blue value"><br>
+    <button onclick="changeColor()">Change Color</button>
+</body>
+
+</html>

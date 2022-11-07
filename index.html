@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lab5 Homepage</title>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6E6E6E;
+            border-radius: 0px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: whitesmoke;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 0px;
+            box-shadow: inset 0px 0px 0px 0px #FFFFFF;
+        }
+
+        html {
+            height: 100%;
+            user-select: none;
+            background-color: rgb(18, 18, 18);
+            margin-bottom: 0em;
+        }
+
+        #header {
+            background-color: rgb(55, 56, 49);
+            text-align: center;
+            margin-bottom: 1em;
+            padding: 1em 0em 1em 0em;
+            color: white;
+        }
+
+        #container {
+            min-height: 81vh;
+        }
+
+        #footer {
+            background-color: rgb(55, 56, 49);
+            text-align: center;
+            margin-top: 1vh;
+            padding: 1em 0em 1em 0em;
+        }
+
+        .bordered {
+            border: 1px solid yellow;
+        }
+
+        .row {
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 80%;
+        }
+
+        .col {
+            min-width: 20em;
+            display: inline-block;
+            height: 200px;
+            margin: 5px;
+            width: calc(33% - 10px);
+            border: 1px solid black;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .background-blur {
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            width: 100%;
+            filter: blur(2px) brightness(50%);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .background-blur:hover {
+            filter: blur(0px);
+        }
+
+        .card-text {
+            color: white;
+            font-size: 2em;
+            pointer-events: none;
+            position: relative;
+            background-color: rgba(50, 50, 50, 33%);
+            width: fit-content;
+            padding: 10px;
+            margin: 0;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        @media screen and (max-width: 110em) {
+            .col {
+                /* min-width: 20em; */
+                display: inline-block;
+                /* height: 100%; */
+                margin: 0px 5px 0px 5px;
+                width: calc(50% - 20px);
+            }
+        }
+
+
+        @media screen and (max-width: 54em) {
+            .col {
+                min-width: 20em;
+                display: inline-block;
+                /* height: 100%; */
+                margin: 0px 5px 0px 5px;
+                width: calc(100% - 10px);
+            }
+        }
+    </style>
+</head>
+
+<body onfocus="(function(){location.reload();})()">
+    <header id="header">
+        <h1>Exercises</h1>
+    </header>
+
+    <div id="container">
+        <div class="row">
+            <span class="col">
+                <a href="exercise1.html">
+                    <div class="background-blur"
+                        style="background-image:url('https://axiomdev.net/sloan/fox1.jpg');"></div>
+                </a>
+                <h1 class="card-text">Exercise1</h1>
+            </span>
+
+            <span class="col">
+                <a href="exercise2.html">
+                    <div class="background-blur" style="background-image:url('https://axiomdev.net/sloan/fox2.jpg');"></div>
+                </a>
+                <h1 class="card-text">Exercise2</h1>
+            </span>
+
+            <span class="col">
+                <a href="exercise3.html">
+                    <div class="background-blur" style="background-image:url('https://axiomdev.net/sloan/fox3.jpg');"></div>
+                </a>
+                <h1 class="card-text">Exercise3</h1>
+            </span>
+
+            <span class="col">
+                <a href="exercise4.html">
+                    <div class="background-blur"
+                        style="background-image:url('https://axiomdev.net/sloan/fox4.jpg');">
+                    </div>
+                </a>
+                <h1 class="card-text">Exercise4</h1>
+            </span>
+        </div>
+    </div>
+
+    <footer id="footer">
+
+    </footer>
+</body>
+
+</html>
